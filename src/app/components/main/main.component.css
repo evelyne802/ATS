@@ -1,0 +1,39 @@
+.background {
+    background: linear-gradient(300deg, #00bfff, #bf6ff9, #ff5ea1, #ffd684);
+    animation: gradient-animation 18s ease infinite;
+    background-size: 220% 220%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    min-height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    background-color: #ffffffcc;
+    width: 75vw;
+    height: 75vh;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 60px;
+    border-radius: 15px;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
