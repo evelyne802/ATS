@@ -14,16 +14,64 @@
 }
 
 .card {
+    font-family: "Montserrat", serif;
+    text-align: center;
+    font-weight: 400;
     display: flex;
     flex-wrap: wrap;
     position: relative;
     background-color: #ffffffcc;
-    width: 75vw;
-    height: 75vh;
-    align-items: center;
+    width: 70vw;
+    height: 500px;
     justify-content: center;
-    padding: 30px 60px;
+    align-content: flex-start;
+    padding: 50px;
     border-radius: 15px;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 1.3rem;
+    height: fit-content;
+    color: #2e2e2e;
+}
+
+.card p {
+    font-weight: 400;
+    font-size: 1rem;
+    width: 85%;
+    height: fit-content;
+    color: #646464;
+}
+
+@media screen and (max-width: 1030px){
+    
+    .card {
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 750px){
+
+}
+
+@media screen and (max-width: 550px){
+    
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .card {
+        width: 85vw;
+        height: 80vh;
+        padding: 30px;
+    }
+
+    .card p {
+        font-weight: 400;
+        font-size: 0.9rem;
+        width: 95%;
+    }
 }
 
 @keyframes gradient-animation {
