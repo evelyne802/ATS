@@ -1,6 +1,38 @@
 <div class="background">
     <div class="card">
-        <label class="title">Welcome to the most accurate applicant tracking system!</label>
-        <p>Simply enter the role requirements, upload your resume, and we'll handle the rest!</p>
+        <div class="titles">
+            <label class="title">Welcome to the most accurate applicant tracking system!</label>
+            <p>Simply enter the role requirements, upload your resume, and we'll handle the rest!</p>
+        </div>
+        <div class="inputs">
+            <div class="input-container">
+                <label class="input-title">Job Description</label>
+                <mat-form-field>
+                    <textarea 
+                        [formControl]="roleFormControl" 
+                        class="textarea" 
+                        rows="3"
+                        matInput>
+                    </textarea>
+                </mat-form-field>
+            </div>
+            <div class="input-container">
+                <label class="input-title">Your Resume</label>
+                <mat-form-field aria-disabled="true">
+                    <textarea 
+                        [formControl]="resumeFormControl"  
+                        class="textarea" 
+                        [readonly]="resumeDisabled"
+                        rows="3"
+                        matInput>
+                    </textarea>
+                    <div [class]="resumeBoxClasses">
+                        <button (click)="removeButtons()">Enter Text</button>
+                        <button>Upload File</button>
+                    </div>
+                </mat-form-field>
+            </div>
+        </div>
+        <button class="submit">Calculate</button>
     </div>
 </div>
