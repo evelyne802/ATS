@@ -121,7 +121,11 @@ button:hover {
 
 .submit {
     width: 300px;
-    /* background-color: #ff5ea1; */
+    background-color: #fac5d5;
+}
+
+.submit:hover {
+    background-color: #ffafc7;
 }
 
 ::-webkit-scrollbar {
