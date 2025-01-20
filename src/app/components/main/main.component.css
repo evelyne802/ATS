@@ -88,15 +88,14 @@ button {
     padding: 7px 10px;
     margin: 0 10px;
     border-radius: 25px;
-    background-color: #fac5d57d;
+    background-color: #fac5d5;
     border: none;
     cursor: pointer;
     transition: 0.3s ease-in;
 }
 
 button:hover {
-    background-color: #f9b9ccb3;
-    /* box-shadow: #c4c4c48b 0px 0px 10px 3px; */
+    background-color: #ffafc7;
 }
 
 .input-title {
@@ -121,12 +120,8 @@ button:hover {
 
 .submit {
     width: 300px;
-    background-color: #fac5d5;
 }
 
-.submit:hover {
-    background-color: #ffafc7;
-}
 
 ::-webkit-scrollbar {
     width: 5px;
@@ -139,12 +134,12 @@ button:hover {
 
 ::-webkit-scrollbar-thumb {
     border-radius: 8px;
-    background: #005e7d; 
+    background: rgb(114, 114, 114); 
 }
 
 ::-webkit-scrollbar-thumb:hover {
     cursor: pointer;
-    background: #003b4e; 
+    background: rgb(90, 90, 90);  
 }
 
 ::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
@@ -190,6 +185,10 @@ button:hover {
 
     .input-title {
         margin: 5px 0;
+    }
+
+    .card p {
+        width: 100%;
     }
 
     ::ng-deep .mdc-text-field {
@@ -243,6 +242,12 @@ button:hover {
 }
 
 @media screen and (max-width: 565px){
+
+    .card p {
+        font-weight: 400;
+        font-size: 0.9rem;
+    }
+
     ::ng-deep .mat-mdc-form-field-infix {
         width: 320px !important;
     }
@@ -262,12 +267,6 @@ button:hover {
     .card {
         width: 85vw;
         height: 80dvh;
-    }
-
-    .card p {
-        font-weight: 400;
-        font-size: 0.9rem;
-        width: 95%;
     }
 
     ::ng-deep .mat-mdc-form-field-infix {
@@ -300,8 +299,16 @@ button:hover {
         width: 110px;
     }
 
+    .card {
+        height: 82dvh;
+    }
+
     ::ng-deep .mat-mdc-form-field-infix {
         width: 290px !important;
+    }
+
+    .card {
+        padding: 40px 50px;
     }
 }
 
@@ -326,11 +333,13 @@ button:hover {
 @media screen and (max-width: 440px){
     .choose-input {
         flex-direction: column;
+        margin-top: -74px;
     }
     
     button {
         width: 185px;
-        margin: 5px;
+        margin: 3px;
+        padding: 5px 10px;
     }
 
     .card p {
@@ -342,15 +351,11 @@ button:hover {
     }
     
     .input-container {
-        height: 135px;
-    }
-
-    .choose-input {
-        margin-top: -93px;
+        height: 110px;
     }
 
     .textarea {
-        height: 100px;
+        height: 75px;
     }
 
     ::ng-deep .mat-mdc-form-field-infix {
