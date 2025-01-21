@@ -21,14 +21,25 @@
                 <mat-form-field aria-disabled="true">
                     <textarea 
                         [formControl]="resumeFormControl"  
-                        class="textarea" 
+                        [class]="textAreaClass" 
                         [readonly]="resumeDisabled"
                         rows="3"
                         matInput>
                     </textarea>
-                    <div [class]="resumeBoxClasses">
-                        <button (click)="removeButtons()">Enter Text</button>
-                        <button>Upload File</button>
+                    <div [class]="resumeBoxClass">
+                        <button (click)="textResume()">Enter Text</button>
+                        <button (click)="uploader.click()">Upload File 
+                            <input 
+                                hidden 
+                                type="file" 
+                                #uploader
+                                (change)="uploadFile($event)"
+                            />
+                        </button>
+                    </div>
+                    <div [class]="resumeFileClass">
+                        <label (click)="closeFileUpload()" class="close"></label>
+                        <label class="filename">{{ fileName }}</label>
                     </div>
                 </mat-form-field>
             </div>

@@ -24,7 +24,7 @@
     width: 70vw;
     height: 600px;
     justify-content: center;
-    align-content: flex-start;
+    align-content: space-around;
     padding: 50px;
     border-radius: 15px;
 }
@@ -76,13 +76,65 @@
     position: absolute;
     width: 100%;
     margin-top: -56px;
+    cursor: auto;
 }
 
 .choose-input-disabled {
     display: none;
 }
 
+.disabled-file-name {
+    display: none;
+}
+
+.show-file-name {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-top: -88px;
+}
+
+.filename {
+    height: 50%;
+}
+
+.close {
+    position: relative;
+    align-self: flex-end;
+    width: 20px;
+    height: 20px;
+    opacity: 0.4;
+    transition: 0.2s ease-in;
+}
+
+.close:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 20px;
+    width: 1.5px;
+    background-color: #333;
+}
+
+  .close:before {
+    transform: rotate(45deg);
+}
+
+.close:after {
+    transform: rotate(-45deg);
+}
+
 button {
+    color: black;
     font-family: "Montserrat", serif;
     width: 150px;
     padding: 7px 10px;
@@ -112,6 +164,10 @@ button:hover {
     width: 100%;
     border: none;
     border-radius: 8px;
+}
+
+.default-cursor {
+    cursor: default;
 }
 
 .textarea:focus-visible {
@@ -170,25 +226,24 @@ button:hover {
     }
 }
 
-@media screen and (max-width: 750px){
-    .card {
-        height: 80dvh;
-    }
-}
 
 @media screen and (max-width: 650px){
     .input-container {
-        height: 110px;
+        height: 140px;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .input-title {
-        margin: 5px 0;
+        margin: 7px 0;
     }
 
     .card p {
         width: 100%;
+    }
+
+    .close {
+        margin: 0 15px;
     }
 
     ::ng-deep .mdc-text-field {
@@ -335,6 +390,11 @@ button:hover {
 }
 
 @media screen and (max-width: 440px){
+
+    .input-container {
+        height: 140px;
+    }
+
     .choose-input {
         flex-direction: column;
         margin-top: -74px;
@@ -352,10 +412,6 @@ button:hover {
 
     .inputs {
         padding: 10px 0;
-    }
-    
-    .input-container {
-        height: 110px;
     }
 
     .textarea {
