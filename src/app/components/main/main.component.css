@@ -102,6 +102,11 @@
     height: 50%;
 }
 
+.file-img {
+    height: 20px;
+    margin: 0px 5px -3px -5px;
+}
+
 .close {
     position: relative;
     align-self: flex-end;
@@ -125,7 +130,7 @@
     background-color: #333;
 }
 
-  .close:before {
+.close:before {
     transform: rotate(45deg);
 }
 
@@ -177,7 +182,6 @@ button:hover {
 .submit {
     width: 300px;
 }
-
 
 ::-webkit-scrollbar {
     width: 5px;
