@@ -198,6 +198,7 @@
 
     .input-title {
         margin: 7px 0;
+        width: fit-content;
     }
 
     .card p {
