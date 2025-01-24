@@ -139,7 +139,7 @@ label {
 
 @media screen and (max-width:650px){
     ::ng-deep .mat-mdc-dialog-container .mdc-dialog__container {
-        height: 70vw;
+        height: 70vh;
     }
 
     .close .tooltip {
