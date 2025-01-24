@@ -13,6 +13,14 @@
     display: inline-block;
     border-bottom: 1px dotted black;
 }
+
+.top-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%
+}
   
 .close .tooltip {
     visibility: hidden;
@@ -29,12 +37,11 @@
     left: 190%;
     font-size: 0.9rem;
     transition: 0.2s ease-in;
-    opacity: 0;
+    align-self: flex-end;
 }
 
 .close:hover .tooltip {
     visibility: visible;
-    opacity: 1;
 }
 
 ::ng-deep .ng-star-inserted {
@@ -67,10 +74,12 @@
 label {
     font-weight: 500;
     font-size: 1.2rem;
+    text-align: center;
+    margin: 15px 0;
 }
   
 .single-chart {
-    width: 40%;
+    width: 200px;
 }
   
   .circular-chart {
@@ -112,6 +121,47 @@ label {
 
   
   .text {
+    font-size: 1rem;
     text-align: center;
   }
+
+@media screen and (max-width: 900px){
+    .single-chart {
+        width: 170px;
+    }
+} 
+
+@media screen and (max-width:750px){
+    ::ng-deep .mat-mdc-dialog-container .mdc-dialog__container {
+        width: 60vw;
+    }
+}  
+
+@media screen and (max-width:650px){
+    ::ng-deep .mat-mdc-dialog-container .mdc-dialog__container {
+        width: 60vw;
+    }
+
+    .close .tooltip {
+        top: -111px;
+        left: -150px;
+    }
+}
+
+@media screen and (max-width:650px){
+    ::ng-deep .mat-mdc-dialog-container .mdc-dialog__container {
+        width: 70vw;
+    }
+}
+
+@media screen and (max-width:440px){
+    .single-chart {
+        width: 150px;
+    }
+
+    .text {
+        font-size: 0.9rem;
+    }
+}
+
 
