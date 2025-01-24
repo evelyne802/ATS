@@ -18,20 +18,23 @@
     visibility: hidden;
     width: 150px;
     background-color: black;
+    opacity: 1;
     color: #fff;
     text-align: center;
     border-radius: 6px;
     padding: 15px;
     position: absolute;
     z-index: 1;
-    top: -5px;
-    right: 105%;
+    top: 10px;
+    left: 190%;
     font-size: 0.9rem;
     transition: 0.2s ease-in;
+    opacity: 0;
 }
 
 .close:hover .tooltip {
     visibility: visible;
+    opacity: 1;
 }
 
 ::ng-deep .ng-star-inserted {
