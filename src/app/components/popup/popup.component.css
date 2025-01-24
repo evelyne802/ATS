@@ -61,7 +61,7 @@
 
 ::ng-deep .mat-mdc-dialog-container .mdc-dialog__container {
     width: 50vw;
-    height: 65dvh;
+    height: 80dvh;
 }
 
 ::ng-deep .mat-mdc-dialog-container .mdc-dialog__surface {
@@ -138,13 +138,10 @@ label {
 }  
 
 @media screen and (max-width:650px){
-    ::ng-deep .mat-mdc-dialog-container .mdc-dialog__container {
-        height: 70vh;
-    }
-
     .close .tooltip {
-        top: -111px;
-        left: -150px;
+        top: -93px;
+        left: -180px;
+        width: 180px;
     }
 }
 
