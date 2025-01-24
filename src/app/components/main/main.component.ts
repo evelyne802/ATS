@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { PopupComponent } from '../popup/popup.component';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-main',
@@ -10,9 +11,9 @@ import { MatInputModule } from '@angular/material/input';
   imports: [ 
     MatFormFieldModule, 
     MatInputModule,
-    //BrowserAnimationsModule,
     ReactiveFormsModule, 
-    FormsModule 
+    FormsModule,
+    MatDialogModule 
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
@@ -27,6 +28,15 @@ export class MainComponent {
   resumeBoxClass = "choose-input";
   resumeFileClass = "disabled-file-name";
   textAreaClass = "textarea default-cursor"
+
+  readonly dialog = inject(MatDialog);
+
+  openPopup() {
+    const dialogRef = this.dialog.open(PopupComponent, {
+      backdropClass: 'cdk-overlay-transparent-backdrop',
+      hasBackdrop: true
+    });
+  }
 
   textResume() {
     this.resumeDisabled = false;

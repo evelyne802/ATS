@@ -1,5 +1,58 @@
-/* You can add global styles to this file, and also import other style files */
 * {
+    font-family: "Montserrat", serif;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+button {
+    color: black;
+    font-family: "Montserrat", serif;
+    width: 150px;
+    padding: 7px 10px;
+    margin: 0 10px;
+    border-radius: 25px;
+    background-color: #fac5d5;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+button:hover {
+    background-color: #ffafc7;
+}
+
+.close {
+    position: relative;
+    align-self: flex-end;
+    width: 20px;
+    height: 20px;
+    opacity: 0.4;
+    transition: 0.2s ease-in;
+}
+
+.close:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 20px;
+    width: 1.5px;
+    background-color: #333;
+}
+
+.close:before {
+    transform: rotate(45deg);
+}
+
+.close:after {
+    transform: rotate(-45deg);
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+  }
