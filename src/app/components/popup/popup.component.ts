@@ -16,4 +16,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 
 export class PopupComponent {
   percentage : string = Math.random().toFixed(2).toString();
+
 }
+
+
+
+

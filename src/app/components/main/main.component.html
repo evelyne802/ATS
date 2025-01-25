@@ -1,5 +1,5 @@
 <div class="background">
-    <div class="card">
+    <div *ngIf="!hireBtnClicked" class="card">
         <div class="titles">
             <label class="title">Welcome to the most accurate applicant tracking system!</label>
             <p>Simply enter the role requirements, upload your resume, and we'll handle the rest!</p>
@@ -45,5 +45,27 @@
             </div>
         </div>
         <button class="submit" (click)="openPopup()">Calculate</button>
+    </div>
+
+    <div *ngIf="hireBtnClicked" class="card info-card">
+        <label class="title">
+            Great choice! Here's all the information you need to contact your new employee
+        </label>
+        <div class="info">
+            <label>linagluzman&#64;gmail.com</label>
+            <label>0523348177</label>
+            <label><a href="../../../assets/files/evelyne_resume.pdf" target=”_blank”>View Resume</a></label>
+        </div>
+        <div class="links">
+            <a href="https://www.linkedin.com/in/evelyne-gluzman-280b72270/" target=”_blank”>
+                <img src="../../../assets/linkedin-logo.png">
+            </a>
+            <a href="https://github.com/evelyne802" target=”_blank”>
+                <img src="../../../assets/github-logo.jpg">
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=972523348177">
+                <img src="../../../assets/whatsapp-logo.png">
+            </a>
+        </div>
     </div>
 </div>

@@ -28,6 +28,10 @@
     border-radius: 15px;
 }
 
+.info-card {
+    padding: 120px 50px;
+}
+
 .titles {
     display: flex;
     justify-content: center;
@@ -134,6 +138,41 @@
 
 .submit {
     width: 300px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info label {
+    margin: 5px 10px;
+    font-size: 1.2rem;
+}
+
+.info label a {
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+}
+
+.info label a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links img {
+    border-radius: 20px;
+    height: 80px;
+    margin: 10px;
+    cursor: pointer;
 }
 
 ::-webkit-scrollbar {
@@ -323,14 +362,19 @@
 
     .card {
         height: 90dvh;
+        padding: 30px 50px;
     }
 
     ::ng-deep .mat-mdc-form-field-infix {
         width: 290px !important;
     }
 
-    .card {
-        padding: 30px 50px;
+    .info-card {
+        padding: 160px 50px;
+    }
+
+    .links img {
+        height: 70px;
     }
 }
 
@@ -418,6 +462,14 @@
 
     .card {
         padding: 25px;
+    }
+
+    .info-card {
+        padding: 160px 35px;
+    }
+
+    .links img {
+        height: 60px;
     }
 }
 

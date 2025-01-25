@@ -4,6 +4,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { PopupComponent } from '../popup/popup.component';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-main',
@@ -13,7 +14,8 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
     MatInputModule,
     ReactiveFormsModule, 
     FormsModule,
-    MatDialogModule 
+    MatDialogModule,
+    NgIf
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
@@ -28,6 +30,7 @@ export class MainComponent {
   resumeBoxClass = "choose-input";
   resumeFileClass = "disabled-file-name";
   textAreaClass = "textarea default-cursor"
+  hireBtnClicked = false;
 
   readonly dialog = inject(MatDialog);
 
@@ -36,6 +39,10 @@ export class MainComponent {
       backdropClass: 'cdk-overlay-transparent-backdrop',
       hasBackdrop: true
     });
+
+    dialogRef.afterClosed().subscribe(() => {
+      this.hireBtnClicked = true;
+  });
   }
 
   textResume() {
