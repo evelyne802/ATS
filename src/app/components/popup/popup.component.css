@@ -60,7 +60,7 @@
 }
 
 ::ng-deep .mat-mdc-dialog-container .mdc-dialog__container {
-    width: 50vw;
+    width: 35vw;
     height: 80dvh;
 }
 
@@ -125,6 +125,12 @@ label {
     text-align: center;
     line-height: 6mm;
   }
+
+@media screen and (max-width:1150px){
+    ::ng-deep .mat-mdc-dialog-container .mdc-dialog__container {
+        width: 50vw;
+    }
+}
 
 @media screen and (max-width: 900px){
     .single-chart {
