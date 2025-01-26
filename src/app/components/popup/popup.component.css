@@ -168,4 +168,10 @@ label {
     }
 }
 
+@media screen and (max-width:400px){
+    label {
+        margin: 0;
+    }
+}
+
 
